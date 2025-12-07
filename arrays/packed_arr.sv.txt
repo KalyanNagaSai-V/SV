@@ -1,0 +1,16 @@
+//array : An array is collection of elements of same type,stored in order and accessed using an index 
+
+//packed array :A group of elements stored in contiguosly as a single vector.
+module tb;
+  bit [7:0]d;
+  int a;
+  
+  initial begin
+    d=8'h85;
+    a=5;
+    
+    $display("Packed array=%b",d);
+    $display("Packed array=%0d",a);
+  
+  end
+endmodule 
