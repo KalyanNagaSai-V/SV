@@ -1,0 +1,46 @@
+//dynamic_array: An array in which size is decided at run time 
+
+module tb;
+  int dy_arr[];
+  
+  initial begin
+    dy_arr=new[4];
+    
+    foreach(dy_arr[i])
+
+      dy_arr[i]=i*10;
+    
+    foreach(dy_arr[i])
+      $display("dy_arr[%0d] =%0d",i,dy_arr[i]);
+        
+  end
+endmodule 
+
+
+module dynamic_array();
+  logic [7:0] a[];  
+  
+  initial begin
+    a = new[3];  
+
+    $display("Size of dynamic array = %0d", $size(a));
+
+    a = {1,22,3};
+   
+    $display("Contents of array = %p", a);
+    
+    a=new[10];
+    
+     $display("Size of dynamic array = %0d", $size(a));  
+    
+    a={1,2,3,4,45,2};
+    
+    $display("Contents of array = %p", a); 
+    
+    a=new[15](a);
+    
+      $display("Contents of array = %p", a);
+    
+    
+  end
+endmodule

@@ -1,0 +1,19 @@
+queue array: An arrays which is Linear data structure that stores element in order (insertion happens at one end,removal happens at other end)
+
+// Follows FIFO 
+
+/*module tb;
+  int q[$];
+  initial begin
+    q.push_back(10);
+    q.push_back(20);
+    q.push_front(5);
+    
+    $display("%p",q);
+    
+    q.pop_front();
+    q.pop_back();   
+    
+    $display("%p",q);
+  end
+endmodule 
