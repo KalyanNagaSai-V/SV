@@ -1,0 +1,20 @@
+//queue-2d
+module tb;
+  
+  int a[$][$];
+  
+  initial begin
+    
+    for(int i=0;i<3;i++)begin
+      int r[$];
+      for(int j=0;j<3;j++)begin
+        r.push_back($urandom_range(0,5));
+      end
+      a.push_back(r);
+    end
+    
+    foreach(a[i,j])begin
+      $display("a[%0d][%0d]=%0d",i,j,a[i][j]);
+    end
+  end
+endmodule 
