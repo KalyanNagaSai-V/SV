@@ -1,0 +1,20 @@
+array methods: find,reverse,sort,unique
+
+module tb;
+  int a[]='{4,5,6,7};
+  
+  initial begin
+    
+    
+    $display("size =%0d",a.size());
+    
+    a.sort();
+    
+    $display("sort=%p",a);
+    
+    a.reverse();
+    $display("reversed=%p",a);
+    
+    $display("index of 6 =%0d",a.find_index(x) with (x==6));
+  end
+endmodule 

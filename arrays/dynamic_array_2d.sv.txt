@@ -1,0 +1,18 @@
+//2d dynamic array
+module tb;
+  
+  int a[][];
+  
+  initial begin
+    a=new[2]; //rows
+    
+    foreach(a[i])
+      a[i]=new[4]; //co
+    if (randomize(a) with { foreach (a[i,j]) a[i][j] inside {[0:5]}; }) begin
+      foreach (a[i,j])
+        $display("a[%0d][%0d] = %p", i, j, a[i][j]);
+    end else begin
+      $display("Randomization failed");
+    end
+  end  
+endmodule
